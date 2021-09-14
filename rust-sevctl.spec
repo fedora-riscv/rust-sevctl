@@ -6,7 +6,7 @@
 
 Name:           rust-%{crate}
 Version:        0.1.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Administrative utility for AMD SEV
 
 # Upstream license specification: Apache-2.0
@@ -52,6 +52,9 @@ Summary:        %{summary}
 %endif
 
 %changelog
+* Tue Sep 14 2021 Sahana Prasad <sahana@redhat.com> - 0.1.0-3
+- Rebuilt with OpenSSL 3.0.0
+
 * Fri Jul 23 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.1.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
 
