@@ -5,8 +5,8 @@
 %global crate sevctl
 
 Name:           rust-%{crate}
-Version:        0.1.0
-Release:        3%{?dist}
+Version:        0.2.0
+Release:        1%{?dist}
 Summary:        Administrative utility for AMD SEV
 
 # Upstream license specification: Apache-2.0
@@ -52,6 +52,9 @@ Summary:        %{summary}
 %endif
 
 %changelog
+* Tue Jan  4 2022 Daniel P. Berrangé <berrange@redhat.com> - 0.2.0-1
+- Update to 0.2.0 release (rhbz #2034304)
+
 * Tue Sep 14 2021 Sahana Prasad <sahana@redhat.com> - 0.1.0-3
 - Rebuilt with OpenSSL 3.0.0
 

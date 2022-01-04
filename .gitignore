@@ -1,1 +1,2 @@
-/sevctl-0.1.0.crate
+/sevctl-*.crate
+*.rpm
