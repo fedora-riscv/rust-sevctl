@@ -14,7 +14,9 @@ License:        ASL 2.0
 URL:            https://crates.io/crates/sevctl
 Source:         %{crates_source}
 
-ExclusiveArch:  %{rust_arches}
+# SEV is an AMD x86_64 CPU feature so doesn't make sense to
+# try to build on other arches
+ExclusiveArch:  x86_64
 
 BuildRequires:  rust-packaging
 
@@ -54,6 +56,7 @@ Summary:        %{summary}
 %changelog
 * Tue Jan  4 2022 Daniel P. Berrangé <berrange@redhat.com> - 0.2.0-1
 - Update to 0.2.0 release (rhbz #2034304)
+- Restrict build arch to x86_64 only
 
 * Tue Sep 14 2021 Sahana Prasad <sahana@redhat.com> - 0.1.0-3
 - Rebuilt with OpenSSL 3.0.0
