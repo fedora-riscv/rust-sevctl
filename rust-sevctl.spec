@@ -6,7 +6,7 @@
 
 Name:           rust-%{crate}
 Version:        0.2.0
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Administrative utility for AMD SEV
 
 # Upstream license specification: Apache-2.0
@@ -54,6 +54,9 @@ Summary:        %{summary}
 %endif
 
 %changelog
+* Tue Feb 15 2022 Zbigniew Jędrzejewski-Szmek <zbyszek@in.waw.pl> - 0.2.0-4
+- Rebuild with package notes
+
 * Tue Feb 15 2022 Zbigniew Jędrzejewski-Szmek <zbyszek@in.waw.pl> - 0.2.0-3
 - Rebuild with package notes
 
