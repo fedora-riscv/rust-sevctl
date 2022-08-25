@@ -5,8 +5,8 @@
 %global crate sevctl
 
 Name:           rust-%{crate}
-Version:        0.2.0
-Release:        5%{?dist}
+Version:        0.3.0
+Release:        1%{?dist}
 Summary:        Administrative utility for AMD SEV
 
 # Upstream license specification: Apache-2.0
@@ -54,6 +54,9 @@ Summary:        %{summary}
 %endif
 
 %changelog
+* Thu Aug 25 2022 Cole Robinson <crobinso@redhat.com> - 0.3.0-1
+- Update to 0.3.0 (rhbz #2097875)
+
 * Sat Jul 23 2022 Fedora Release Engineering <releng@fedoraproject.org> - 0.2.0-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_37_Mass_Rebuild
 
