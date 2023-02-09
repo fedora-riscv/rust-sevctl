@@ -1,0 +1,29 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 8a106d2..9f0fa4f 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -71,7 +71,7 @@ features = ["derive"]
+ version = "1.0"
+ 
+ [dependencies.sev]
+-version = "1.0.1"
++version = "1.1.0"
+ features = ["openssl"]
+ 
+ [dependencies.structopt]
+diff --git a/src/main.rs b/src/main.rs
+index 742aec2..fb337fc 100644
+--- a/src/main.rs
++++ b/src/main.rs
+@@ -16,7 +16,10 @@ use structopt::StructOpt;
+ use codicon::*;
+ 
+ use ::sev::certs::*;
+-use ::sev::firmware::host::{types::Status, Firmware, PlatformStatusFlags};
++use ::sev::firmware::host::{
++    types::{PlatformStatusFlags, Status},
++    Firmware,
++};
+ use ::sev::Generation;
+ 
+ use std::fs::File;
