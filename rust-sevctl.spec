@@ -5,7 +5,7 @@
 
 Name:           rust-sevctl
 Version:        0.3.2
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Administrative utility for AMD SEV
 
 License:        Apache-2.0
