@@ -11,8 +11,8 @@
 %global crate sevctl
 
 Name:           rust-sevctl
-Version:        0.3.2
-Release:        5%{?dist}
+Version:        0.4.1
+Release:        1%{?dist}
 Summary:        Administrative utility for AMD SEV
 
 License:        Apache-2.0
@@ -23,8 +23,6 @@ Source1:        LICENSE.dependencies
 #   tar xf %%{crate}-%%{version}.crate ; pushd %%{crate}-%%{version} ; \
 #   cargo vendor && tar Jcvf ../%%{crate}-%%{version}-vendor.tar.xz vendor/ ; popd
 Source2:        %{crate}-%{version}-vendor.tar.xz
-# Temporal patch to update the sev dependency
-Patch:          sevctl-update-sev.diff
 
 # SEV is an AMD x86_64 CPU feature so doesn't make sense to
 # try to build on other arches
@@ -86,6 +84,10 @@ cp -pav %{SOURCE1} .
 %endif
 
 %changelog
+* Wed Jul 19 2023 Tyler Fanelli <tfanelli@redhat.com> - 0.4.1-1
+- Update to 0.4.1
+- Remove patch to update sev dependency.
+
 * Mon May 15 2023 Yaakov Selkowitz <yselkowi@redhat.com> - 0.3.2-5
 - Use vendored dependencies for RHEL builds
 
