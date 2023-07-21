@@ -1,3 +1,4 @@
 /sevctl-*.crate
 *.rpm
 /sevctl-0.3.2-vendor.tar.xz
+/sevctl-0.4.1-vendor.tar.xz
