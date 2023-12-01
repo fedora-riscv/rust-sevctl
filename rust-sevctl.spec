@@ -5,7 +5,7 @@
 
 Name:           rust-sevctl
 Version:        0.3.2
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Administrative utility for AMD SEV
 
 License:        Apache-2.0
@@ -65,6 +65,9 @@ cp -pav %{SOURCE1} .
 %endif
 
 %changelog
+* Fri Dec 01 2023 Fabio Valentini <decathorpe@gmail.com> - 0.3.2-5
+- Rebuild for openssl crate >= v0.10.60 (RUSTSEC-2023-0044, RUSTSEC-2023-0072)
+
 * Wed May 03 2023 Fabio Valentini <decathorpe@gmail.com> - 0.3.2-4
 - Rebuild for openssl crate >= v0.10.48 (RUSTSEC-2023-{0022,0023,0024})
 
