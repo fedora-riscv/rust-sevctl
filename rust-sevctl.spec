@@ -57,14 +57,18 @@ License:        Apache-2.0 AND MIT
 
 %files       -n %{crate}
 %license LICENSE
+%license LICENSE.dependencies
+%if 0%{?bundled_rust_deps}
+%license cargo-vendor.txt
+%endif
 %doc README.md
 %{_bindir}/sevctl
 
 %prep
-%autosetup -n %{crate}-%{version_no_tilde} -p1
+%autosetup -n %{crate}-%{version_no_tilde} -p1 %{?bundled_rust_deps:-a2}
 cp -pav %{SOURCE1} .
 %if 0%{?bundled_rust_deps}
-%cargo_prep -V 2
+%cargo_prep -v vendor
 %else
 %cargo_prep
 
@@ -74,6 +78,11 @@ cp -pav %{SOURCE1} .
 
 %build
 %cargo_build
+%cargo_license_summary
+%{cargo_license} > LICENSE.dependencies
+%if 0%{?bundled_rust_deps}
+%cargo_vendor_manifest
+%endif
 
 %install
 %cargo_install
